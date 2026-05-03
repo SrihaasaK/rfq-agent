@@ -2,6 +2,8 @@
 
 A hypothesis-driven disambiguation agent for industrial brass fittings RFQs. Built as a technical demonstration for Paragon.
 
+**[Live Demo](https://srihaasak-rfq-agent-app-ezjiba.streamlit.app/)**
+
 ## The Problem
 
 > "A contractor sends a request for a brass fitting with several important details left out. How do you know what SKU they mean, based on their history with you, their end market, etc.?"
