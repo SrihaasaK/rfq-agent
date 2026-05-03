@@ -1,0 +1,302 @@
+[
+  {
+    "sku": "BF-1001",
+    "type": "elbow",
+    "size": "1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 4.25,
+    "common_end_markets": ["commercial plumbing", "hospitality", "HVAC"]
+  },
+  {
+    "sku": "BF-1002",
+    "type": "elbow",
+    "size": "1/2\"",
+    "thread_standard": "BSP",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 4.55,
+    "common_end_markets": ["marine", "import equipment", "industrial"]
+  },
+  {
+    "sku": "BF-1003",
+    "type": "elbow",
+    "size": "1/2\"",
+    "thread_standard": "compression",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 200,
+    "price_usd": 5.10,
+    "common_end_markets": ["residential plumbing", "water heater", "refrigeration"]
+  },
+  {
+    "sku": "BF-1004",
+    "type": "elbow",
+    "size": "1/2\"",
+    "thread_standard": "sweat",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 200,
+    "price_usd": 3.95,
+    "common_end_markets": ["residential plumbing", "hydronic heating"]
+  },
+  {
+    "sku": "BF-1005",
+    "type": "elbow",
+    "size": "3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 6.50,
+    "common_end_markets": ["commercial plumbing", "hospitality", "HVAC"]
+  },
+  {
+    "sku": "BF-1006",
+    "type": "elbow",
+    "size": "3/4\"",
+    "thread_standard": "BSP",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 6.85,
+    "common_end_markets": ["marine", "import equipment", "industrial"]
+  },
+  {
+    "sku": "BF-1007",
+    "type": "elbow",
+    "size": "1\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 125,
+    "price_usd": 9.75,
+    "common_end_markets": ["commercial plumbing", "fire suppression", "industrial"]
+  },
+  {
+    "sku": "BF-1008",
+    "type": "elbow",
+    "size": "1\"",
+    "thread_standard": "NPT",
+    "material_grade": "C46400",
+    "pressure_rating_psi": 300,
+    "price_usd": 14.50,
+    "common_end_markets": ["marine", "naval", "offshore"]
+  },
+  {
+    "sku": "BF-2001",
+    "type": "tee",
+    "size": "1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 6.75,
+    "common_end_markets": ["commercial plumbing", "hospitality", "HVAC"]
+  },
+  {
+    "sku": "BF-2002",
+    "type": "tee",
+    "size": "1/2\"",
+    "thread_standard": "compression",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 200,
+    "price_usd": 7.40,
+    "common_end_markets": ["residential plumbing", "water heater", "refrigeration"]
+  },
+  {
+    "sku": "BF-2003",
+    "type": "tee",
+    "size": "3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 9.25,
+    "common_end_markets": ["commercial plumbing", "hospitality", "HVAC"]
+  },
+  {
+    "sku": "BF-2004",
+    "type": "tee",
+    "size": "3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C84400",
+    "pressure_rating_psi": 250,
+    "price_usd": 12.80,
+    "common_end_markets": ["potable water", "food processing", "pharmaceutical"]
+  },
+  {
+    "sku": "BF-2005",
+    "type": "tee",
+    "size": "1\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 125,
+    "price_usd": 13.50,
+    "common_end_markets": ["commercial plumbing", "fire suppression", "industrial"]
+  },
+  {
+    "sku": "BF-3001",
+    "type": "coupling",
+    "size": "1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 3.50,
+    "common_end_markets": ["commercial plumbing", "HVAC", "industrial"]
+  },
+  {
+    "sku": "BF-3002",
+    "type": "coupling",
+    "size": "1/2\"",
+    "thread_standard": "BSP",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 3.80,
+    "common_end_markets": ["marine", "import equipment", "industrial"]
+  },
+  {
+    "sku": "BF-3003",
+    "type": "coupling",
+    "size": "3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 5.25,
+    "common_end_markets": ["commercial plumbing", "HVAC", "industrial"]
+  },
+  {
+    "sku": "BF-3004",
+    "type": "coupling",
+    "size": "3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C84400",
+    "pressure_rating_psi": 250,
+    "price_usd": 8.10,
+    "common_end_markets": ["potable water", "food processing", "pharmaceutical"]
+  },
+  {
+    "sku": "BF-3005",
+    "type": "coupling",
+    "size": "1\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 125,
+    "price_usd": 7.90,
+    "common_end_markets": ["commercial plumbing", "fire suppression", "industrial"]
+  },
+  {
+    "sku": "BF-4001",
+    "type": "nipple",
+    "size": "1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 2.80,
+    "common_end_markets": ["commercial plumbing", "HVAC", "industrial"]
+  },
+  {
+    "sku": "BF-4002",
+    "type": "nipple",
+    "size": "1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C46400",
+    "pressure_rating_psi": 300,
+    "price_usd": 5.60,
+    "common_end_markets": ["marine", "naval", "offshore"]
+  },
+  {
+    "sku": "BF-4003",
+    "type": "nipple",
+    "size": "3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 3.95,
+    "common_end_markets": ["commercial plumbing", "HVAC", "industrial"]
+  },
+  {
+    "sku": "BF-4004",
+    "type": "nipple",
+    "size": "1\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 125,
+    "price_usd": 5.40,
+    "common_end_markets": ["commercial plumbing", "fire suppression", "industrial"]
+  },
+  {
+    "sku": "BF-5001",
+    "type": "union",
+    "size": "1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 11.25,
+    "common_end_markets": ["commercial plumbing", "HVAC", "industrial"]
+  },
+  {
+    "sku": "BF-5002",
+    "type": "union",
+    "size": "1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C84400",
+    "pressure_rating_psi": 250,
+    "price_usd": 15.90,
+    "common_end_markets": ["potable water", "food processing", "pharmaceutical"]
+  },
+  {
+    "sku": "BF-5003",
+    "type": "union",
+    "size": "3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 14.50,
+    "common_end_markets": ["commercial plumbing", "HVAC", "industrial"]
+  },
+  {
+    "sku": "BF-5004",
+    "type": "union",
+    "size": "1\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 125,
+    "price_usd": 18.75,
+    "common_end_markets": ["commercial plumbing", "fire suppression", "industrial"]
+  },
+  {
+    "sku": "BF-6001",
+    "type": "reducer",
+    "size": "3/4\" x 1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 150,
+    "price_usd": 5.85,
+    "common_end_markets": ["commercial plumbing", "HVAC", "industrial"]
+  },
+  {
+    "sku": "BF-6002",
+    "type": "reducer",
+    "size": "1\" x 3/4\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 125,
+    "price_usd": 8.40,
+    "common_end_markets": ["commercial plumbing", "fire suppression", "industrial"]
+  },
+  {
+    "sku": "BF-6003",
+    "type": "reducer",
+    "size": "1\" x 1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C36000",
+    "pressure_rating_psi": 125,
+    "price_usd": 8.75,
+    "common_end_markets": ["commercial plumbing", "industrial"]
+  },
+  {
+    "sku": "BF-6004",
+    "type": "reducer",
+    "size": "3/4\" x 1/2\"",
+    "thread_standard": "NPT",
+    "material_grade": "C84400",
+    "pressure_rating_psi": 250,
+    "price_usd": 9.20,
+    "common_end_markets": ["potable water", "food processing", "pharmaceutical"]
+  }
+]
