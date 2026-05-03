@@ -73,7 +73,15 @@ with col_output:
             try:
                 result = process_rfq(email_text, customer_name)
             except Exception as e:
-                st.error(f"Error: {e}")
+                err = str(e)
+                if "429" in err or "rate_limit" in err.lower():
+                    st.error("**Rate limit reached.** Groq's free tier has a daily token cap (500K tokens/day). Try again later or upgrade at [console.groq.com](https://console.groq.com/settings/billing).")
+                elif "api_key" in err.lower() or "authentication" in err.lower():
+                    st.error("**API key missing or invalid.** Copy `.env.example` to `.env` and add your Groq API key. Free keys at [console.groq.com](https://console.groq.com).")
+                elif "connection" in err.lower() or "timeout" in err.lower():
+                    st.error("**Connection error.** Could not reach the Groq API. Check your internet connection and try again.")
+                else:
+                    st.error(f"**Something went wrong.** {err}")
                 st.stop()
 
         # Route badge
@@ -161,7 +169,11 @@ if st.button("Run Full Eval (20 test cases)", use_container_width=True):
         st.subheader(f"Failures ({len(failures)})")
         for f in failures:
             if f.get("status") == "error":
-                st.error(f"**{f['id']}**: {f['error']}")
+                err = f.get("error", "")
+                if "429" in err or "rate_limit" in err.lower():
+                    st.error(f"**{f['id']}**: Rate limit reached — Groq's daily token cap hit. Try again later.")
+                else:
+                    st.error(f"**{f['id']}**: {err}")
             else:
                 fa = f.get("failure_analysis", {})
                 st.warning(
