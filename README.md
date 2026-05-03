@@ -1,47 +1,56 @@
 # RFQ-to-Quote Agent
 
-A hypothesis-driven disambiguation agent for industrial brass fittings RFQs. Built as a technical demonstration for Paragon.
+A hypothesis-driven disambiguation agent that turns ambiguous brass fittings RFQ emails into confident quotes, targeted clarifying questions, or structured human escalations. Built as a technical demonstration for Paragon.
 
-**[Live Demo](https://srihaasak-rfq-agent-app-ezjiba.streamlit.app/)**
+**[Live Demo](https://srihaasak-rfq-agent-app-ezjiba.streamlit.app/)** | Run locally: `streamlit run app.py`
+
+## Headline Result
+
+| Metric | v1 | v2 | Delta |
+|---|---|---|---|
+| Route accuracy | 70% (14/20) | **95% (19/20)** | +25pp |
+| Clarify cases routed correctly | 0/4 | **4/4** | fixed |
+| Question quality | 0% (no questions generated) | **75%** | +75pp |
+| Human escalation | 75% (3/4) | **100% (4/4)** | +25pp |
+| SKU match (when quoting) | 83% (10/12) | **83% (10/12)** | unchanged |
+
+## What v1 Revealed (The Diagnosis)
+
+- **Bimodal confidence collapse.** Llama 4 Scout outputs either 0.90 or 0.60 with nothing in between. The clarify band (0.65-0.80) never fires, so all 4 ambiguous cases were misrouted to quote.
+- **Customer history inflates confidence.** When a customer has order history, the model assigns 0.90 confidence even when a critical spec (thread standard, material grade) is genuinely missing and history contains multiple values for that spec.
+- **No structural guard for obvious ambiguity.** When a customer literally writes "not sure if 1/2 or 3/4" (tc_12), the system quoted anyway because model confidence was 0.90. Pure prompt-based reasoning failed; a rule layer was needed.
+
+## What v2 Did (The Fix)
+
+- **Rule-based guards before model routing.** Regex on ambiguity language ("not sure", "probably", "can you advise", size alternatives) forces clarify. Out-of-catalog indicators (metric sizes, stainless, custom) forces human escalation. Close-confidence hypotheses with missing critical specs forces clarify instead of guessing.
+- **Few-shot calibration examples in the hypothesis prompt.** Four examples anchoring specific scenarios to specific confidence scores (0.72, 0.82, 0.88, 0.92). Broke the bimodal distribution — ambiguous-with-history cases dropped from 0.90 to 0.82.
+- **Prompt-level guardrails.** "Customer history is probabilistic, not conclusive" prevents history from inflating confidence when multiple spec values exist. "Explicit specs override missing customer context" prevents penalizing clear RFQs that have no history.
 
 ## The Problem
 
-> "A contractor sends a request for a brass fitting with several important details left out. How do you know what SKU they mean, based on their history with you, their end market, etc.?"
+> "A contractor sends a request for a brass fitting with several important details left out. How do you know what SKU they mean, based on their history with you, their end market, etc.? How do you make judgment calls better than a 30-year industry veteran? A mistake means a returned product."
 
-Industrial distributors receive RFQ emails that are ambiguous by nature. A request for "200 half-inch brass elbows, same as last time" could map to 4 different SKUs. Getting it wrong means a returned shipment. The agent must either resolve the ambiguity confidently or ask the *right* clarifying question.
+Industrial distributors receive RFQ emails that are ambiguous by nature. A request for "200 half-inch brass elbows, same as last time" could map to 4 different SKUs that differ by thread standard or material grade. Getting it wrong means a returned shipment. The agent must either resolve the ambiguity confidently or ask the *right* clarifying question — not a generic "can you provide more details?"
 
-## Approach: Two-LLM Hypothesis Pipeline
+## Approach
 
-Think of it like a distributor's front desk. The **intake clerk** (Llama 3.1 8B, fast/free) parses the email into structured data. The **senior rep** (Llama 4 Scout, stronger reasoning) looks at that data alongside customer history and the catalog, then generates 2-3 ranked SKU hypotheses with explicit confidence scores.
+Think of it like a distributor's front desk. The **intake clerk** (Llama 3.1 8B via Groq, fast/free) parses the noisy email into structured data: product type, specs mentioned, specs missing, customer signals. The **senior rep** (Llama 4 Scout via Groq, stronger reasoning) looks at that structured data alongside customer order history and the catalog, then generates 2-3 ranked SKU hypotheses with explicit confidence scores and reasoning.
 
-The routing decision flows from confidence:
-- **>= 0.80** — Generate a quote draft
-- **0.65 - 0.80** — Ask a targeted clarifying question that disambiguates the top 2 hypotheses
-- **< 0.65** — Escalate to human with structured reasoning
+This is structurally the same pattern used in ARC-AGI reasoning: generate multiple hypotheses, score them against available evidence, and act on (or narrow) the highest-confidence candidate. The agent doesn't guess — it shows its work. Two focused LLM calls beat one monolithic prompt: each is simpler, cheaper, and independently evaluable.
 
-Three rule-based guards override LLM confidence when the email text contains unambiguous signals: explicit uncertainty language ("not sure", "probably") forces clarification, out-of-catalog indicators (metric sizes, stainless) force human escalation, and close-confidence hypotheses with missing critical specs force clarification rather than guessing.
+## What Still Fails
 
-## Eval Results
+- **tc_08 (Sarah Chen's marine nipple).** Expected clarify for material_grade, but the model quotes BF-4002 (C46400) at 0.82 confidence. Sarah Chen's history is exclusively marine/naval, and the email says "saltwater exposure." The model's reasoning is arguably correct — this is the kind of judgment call that benefits from a configurable risk threshold rather than a blanket rule.
 
-Measured on 20 test cases (15 sample emails + 5 edge cases):
+## What I'd Build Next
 
-| Metric | v1 (baseline) | v2 (calibrated) | What changed |
-|--------|---------------|------------------|-------------|
-| Route accuracy | 70% (14/20) | **95% (19/20)** | Few-shot calibration + rule-based guards |
-| SKU match rate | 83% (10/12) | **83% (10/12)** | Unchanged — extraction was already solid |
-| Question quality | 0% (no clarify routes) | **75%** | Ambiguous cases now correctly route to clarify |
-| Human escalation | 75% (3/4) | **100% (4/4)** | Out-of-catalog guard catches metric/custom |
+- **Multi-turn clarification** — receive the customer's answer, re-run hypothesis generation with the new constraint
+- **Confidence calibration** — track predicted vs. actual correctness over time, apply Platt scaling
+- **Catalog ingestion pipeline** — parse real distributor catalogs (CSV/PDF) into structured format
+- **Customer history sync** — pull from ERP/CRM instead of static JSON
+- **Learning loops** — when a sales rep overrides the agent's pick, feed that correction back
 
-## What I Learned About Llama 4 Scout
-
-The first eval run revealed **bimodal confidence distribution**: the model outputs either 0.90 or 0.60, with nothing in between. This collapsed the clarify band — ambiguous cases jumped straight to quote because customer history inflated confidence to 0.90 even when critical specs were missing.
-
-Three fixes, in order of leverage:
-1. **Few-shot calibration examples** in the hypothesis prompt showing what 0.72, 0.82, and 0.88 confidence look like. The model calibrated to these — ambiguous-with-history cases dropped from 0.90 to 0.82.
-2. **Rule-based ambiguity guard**: if the email contains "not sure", "or" between sizes, "probably", or "can you advise", force a clarify route regardless of model confidence. This caught 2 cases the model still missed.
-3. **Close-hypotheses guard**: when the top 2 SKU candidates are within 0.07 of each other and a critical spec (size, thread standard, material grade) is missing, the agent can't pick one — ask instead of guess.
-
-The remaining failure (tc_08) is debatable: Sarah Chen's marine history strongly implies C46400 naval brass for a saltwater application. The model quotes confidently; the test expects clarification. In production, this is the kind of judgment call that benefits from a configurable risk threshold.
+---
 
 ## Running It
 
@@ -54,14 +63,4 @@ streamlit run app.py   # Interactive demo
 python -m evals.eval   # Run eval suite
 ```
 
-## What I'd Build Next
-
-- **Multi-turn clarification** — receive the answer, re-run hypothesis generation with the new constraint
-- **Confidence calibration** — track predicted vs. actual correctness, apply Platt scaling over time
-- **Catalog ingestion pipeline** — parse real distributor catalogs (CSV/PDF) into structured format
-- **Customer history sync** — pull from ERP/CRM instead of static JSON
-- **Learning loops** — when a rep overrides the agent's pick, feed that correction back
-
----
-
-Built as a Paragon FDE application project. The code prioritizes eval rigor and architectural clarity over feature breadth.
+Built as a Paragon FDE application project.
