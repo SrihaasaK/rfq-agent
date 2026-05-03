@@ -1,0 +1,167 @@
+[
+  {
+    "id": "tc_01",
+    "email_file": "email_01_clear_coupling.txt",
+    "customer_name": null,
+    "expected_route": "quote",
+    "expected_sku": "BF-3001",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_02",
+    "email_file": "email_02_clear_tee.txt",
+    "customer_name": "Tom Briggs",
+    "expected_route": "quote",
+    "expected_sku": "BF-2003",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_03",
+    "email_file": "email_03_clear_naval_elbow.txt",
+    "customer_name": "Sarah Chen",
+    "expected_route": "quote",
+    "expected_sku": "BF-1008",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_04",
+    "email_file": "email_04_clear_reducer.txt",
+    "customer_name": "Tom Briggs",
+    "expected_route": "quote",
+    "expected_sku": "BF-6001",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_05",
+    "email_file": "email_05_clear_union.txt",
+    "customer_name": "Linda Park",
+    "expected_route": "quote",
+    "expected_sku": "BF-5002",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_06",
+    "email_file": "email_06_ambig_elbow_thread.txt",
+    "customer_name": "Dave Kowalski",
+    "expected_route": "clarify",
+    "expected_sku": null,
+    "disambiguating_specs": ["thread_standard"]
+  },
+  {
+    "id": "tc_07",
+    "email_file": "email_07_ambig_marriott_elbows.txt",
+    "customer_name": "Mike Reynolds",
+    "expected_route": "quote",
+    "expected_sku": "BF-1001",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_08",
+    "email_file": "email_08_ambig_marine_nipple.txt",
+    "customer_name": "Sarah Chen",
+    "expected_route": "clarify",
+    "expected_sku": null,
+    "disambiguating_specs": ["material_grade"]
+  },
+  {
+    "id": "tc_09",
+    "email_file": "email_09_ambig_tee_material.txt",
+    "customer_name": "Linda Park",
+    "expected_route": "quote",
+    "expected_sku": "BF-2004",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_10",
+    "email_file": "email_10_ambig_same_as_last.txt",
+    "customer_name": "Tom Briggs",
+    "expected_route": "quote",
+    "expected_sku": "BF-1005",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_11",
+    "email_file": "email_11_ambig_condo_fittings.txt",
+    "customer_name": "Dave Kowalski",
+    "expected_route": "quote",
+    "expected_sku": "BF-2002",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_12",
+    "email_file": "email_12_ambig_coupling_size.txt",
+    "customer_name": "Linda Park",
+    "expected_route": "clarify",
+    "expected_sku": null,
+    "disambiguating_specs": ["size"]
+  },
+  {
+    "id": "tc_13",
+    "email_file": "email_13_garbage_vague.txt",
+    "customer_name": null,
+    "expected_route": "human",
+    "expected_sku": null,
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_14",
+    "email_file": "email_14_garbage_wrong_product.txt",
+    "customer_name": null,
+    "expected_route": "human",
+    "expected_sku": null,
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_15",
+    "email_file": "email_15_garbage_incomplete.txt",
+    "customer_name": null,
+    "expected_route": "human",
+    "expected_sku": null,
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_16",
+    "email_file": null,
+    "email_text": "Need 50 brass elbows, 3/4 inch NPT, C36000. 150 PSI. Standard commercial job.",
+    "customer_name": null,
+    "expected_route": "quote",
+    "expected_sku": "BF-1005",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_17",
+    "email_file": null,
+    "email_text": "Hi, we need brass tees but I'm not sure what size. It's for a residential water heater install. Probably half inch? Can you advise?",
+    "customer_name": null,
+    "expected_route": "clarify",
+    "expected_sku": null,
+    "disambiguating_specs": ["size", "thread_standard"]
+  },
+  {
+    "id": "tc_18",
+    "email_file": null,
+    "email_text": "Same nipples as our last Coast Guard order. Need 60 pieces.",
+    "customer_name": "Sarah Chen",
+    "expected_route": "quote",
+    "expected_sku": "BF-4002",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_19",
+    "email_file": null,
+    "email_text": "I need a reducer from 1 inch down to 3/4 inch, NPT, standard brass. Just 10 pieces for a quick repair.",
+    "customer_name": null,
+    "expected_route": "quote",
+    "expected_sku": "BF-6002",
+    "disambiguating_specs": []
+  },
+  {
+    "id": "tc_20",
+    "email_file": null,
+    "email_text": "We're looking at brass fittings for a new water treatment plant. Need lead-free material. Can you send your full catalog and price list? We'll be ordering couplings, tees, and reducers in various sizes.",
+    "customer_name": null,
+    "expected_route": "human",
+    "expected_sku": null,
+    "disambiguating_specs": []
+  }
+]
