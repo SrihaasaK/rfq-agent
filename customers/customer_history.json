@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Mike Reynolds",
+    "company": "Greenfield Plumbing",
+    "industry": "commercial plumbing contractor",
+    "typical_end_markets": ["hospitality", "commercial plumbing", "HVAC"],
+    "last_5_orders": [
+      {"sku": "BF-1001", "quantity": 180, "date": "2025-09-12", "project_note": "Marriott renovation"},
+      {"sku": "BF-2001", "quantity": 50, "date": "2025-09-12", "project_note": "Marriott renovation"},
+      {"sku": "BF-1005", "quantity": 100, "date": "2025-07-20", "project_note": "Hilton Express build"},
+      {"sku": "BF-3001", "quantity": 200, "date": "2025-06-03", "project_note": "Holiday Inn refit"},
+      {"sku": "BF-4001", "quantity": 300, "date": "2025-04-15", "project_note": "Marriott Phase 1"}
+    ]
+  },
+  {
+    "name": "Sarah Chen",
+    "company": "Pacific Marine Services",
+    "industry": "marine maintenance",
+    "typical_end_markets": ["marine", "naval", "offshore"],
+    "last_5_orders": [
+      {"sku": "BF-1008", "quantity": 40, "date": "2025-10-01", "project_note": "USS Halsey refit"},
+      {"sku": "BF-4002", "quantity": 60, "date": "2025-08-18", "project_note": "Coast Guard cutter"},
+      {"sku": "BF-1002", "quantity": 25, "date": "2025-07-05", "project_note": "cargo vessel"},
+      {"sku": "BF-3002", "quantity": 30, "date": "2025-05-22", "project_note": "dock piping"},
+      {"sku": "BF-1008", "quantity": 50, "date": "2025-03-10", "project_note": "submarine tender"}
+    ]
+  },
+  {
+    "name": "Tom Briggs",
+    "company": "Briggs Mechanical",
+    "industry": "industrial HVAC contractor",
+    "typical_end_markets": ["HVAC", "commercial plumbing", "industrial"],
+    "last_5_orders": [
+      {"sku": "BF-1005", "quantity": 150, "date": "2025-11-02", "project_note": "Amazon warehouse HVAC"},
+      {"sku": "BF-2003", "quantity": 75, "date": "2025-09-28", "project_note": "data center cooling"},
+      {"sku": "BF-6001", "quantity": 40, "date": "2025-08-14", "project_note": "hospital wing"},
+      {"sku": "BF-5003", "quantity": 20, "date": "2025-06-30", "project_note": "boiler room"},
+      {"sku": "BF-3003", "quantity": 100, "date": "2025-05-11", "project_note": "school district HVAC"}
+    ]
+  },
+  {
+    "name": "Linda Park",
+    "company": "CleanFlow Systems",
+    "industry": "food & beverage processing",
+    "typical_end_markets": ["food processing", "pharmaceutical", "potable water"],
+    "last_5_orders": [
+      {"sku": "BF-2004", "quantity": 30, "date": "2025-10-15", "project_note": "dairy plant expansion"},
+      {"sku": "BF-3004", "quantity": 45, "date": "2025-09-03", "project_note": "brewery install"},
+      {"sku": "BF-5002", "quantity": 15, "date": "2025-07-22", "project_note": "pharma cleanroom"},
+      {"sku": "BF-6004", "quantity": 25, "date": "2025-06-10", "project_note": "water treatment"},
+      {"sku": "BF-2004", "quantity": 20, "date": "2025-04-28", "project_note": "juice bottling line"}
+    ]
+  },
+  {
+    "name": "Dave Kowalski",
+    "company": "Kowalski & Sons Plumbing",
+    "industry": "residential plumbing contractor",
+    "typical_end_markets": ["residential plumbing", "water heater", "hydronic heating"],
+    "last_5_orders": [
+      {"sku": "BF-1003", "quantity": 100, "date": "2025-10-20", "project_note": "condo complex"},
+      {"sku": "BF-1004", "quantity": 200, "date": "2025-09-05", "project_note": "townhome development"},
+      {"sku": "BF-2002", "quantity": 50, "date": "2025-07-18", "project_note": "kitchen remodel batch"},
+      {"sku": "BF-1003", "quantity": 80, "date": "2025-06-01", "project_note": "apartment rehab"},
+      {"sku": "BF-1004", "quantity": 150, "date": "2025-04-12", "project_note": "subdivision Phase 2"}
+    ]
+  }
+]
