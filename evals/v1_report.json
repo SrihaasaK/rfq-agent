@@ -1,0 +1,742 @@
+{
+  "summary": {
+    "total_cases": 20,
+    "route_accuracy": 0.7,
+    "route_correct": 14,
+    "sku_match_rate": 0.833,
+    "sku_correct": 10,
+    "sku_total": 12,
+    "question_quality_avg": 0.0,
+    "question_quality_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "human_escalation_rate": 0.75,
+    "human_correct": 3,
+    "human_total": 4
+  },
+  "results": [
+    {
+      "id": "tc_01",
+      "status": "ok",
+      "elapsed_seconds": 1.29,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's request is specific enough to generate meaningful hypotheses based on the provided specs and catalog.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-3001",
+          "description": "Coupling, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.9,
+          "reasoning": "The customer's request matches BF-3001 exactly in terms of product type (coupling), size (1/2\"), thread standard (NPT), material grade (C36000), and pressure rating (150 PSI)."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-3002",
+          "description": "Coupling, 1/2\", BSP, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer's request matches BF-3002 except for the thread standard, which is specified as NPT. However, BSP is a possible alternative."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-3003",
+          "description": "Coupling, 3/4\", NPT, C36000, 150 PSI",
+          "confidence": 0.4,
+          "reasoning": "The customer's request matches BF-3003 except for the size, which is specified as 1/2\". However, 3/4\" is a possible alternative size."
+        }
+      ],
+      "expected_sku": "BF-3001",
+      "actual_sku": "BF-3001",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_02",
+      "status": "ok",
+      "elapsed_seconds": 1.78,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's RFQ provided clear specs and referenced past orders, allowing for a targeted search of the catalog.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-2003",
+          "description": "3/4\" NPT C36000 150psi Tee",
+          "confidence": 0.9,
+          "reasoning": "The customer's RFQ specifies a 3/4 inch NPT tee with 150psi rating and C36000 material grade. BF-2003 matches these specs exactly and the customer has previously ordered similar products (BF-2003, BF-1005)."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-2001",
+          "description": "1/2\" NPT C36000 150psi Tee",
+          "confidence": 0.6,
+          "reasoning": "Although BF-2001 has a smaller size (1/2\"), it matches the other specs (NPT, C36000, 150psi) and the customer has ordered similar products in the past. However, the size mismatch reduces confidence."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-2004",
+          "description": "3/4\" NPT C84400 250psi Tee",
+          "confidence": 0.4,
+          "reasoning": "BF-2004 matches the size and thread standard but has a different material grade (C84400) and higher pressure rating (250psi). The customer's history doesn't suggest use of this specific material grade."
+        }
+      ],
+      "expected_sku": "BF-2003",
+      "actual_sku": "BF-2003",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_03",
+      "status": "ok",
+      "elapsed_seconds": 1.43,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's request provided clear specifications that matched a product in the catalog, and their history showed relevant orders for similar applications.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1008",
+          "description": "Elbow, 1\" NPT, C46400, 300psi",
+          "confidence": 0.9,
+          "reasoning": "The customer's request matches BF-1008 exactly in terms of product type (elbow), size (1\"), thread standard (NPT), material grade (C46400), and pressure rating (300psi). Additionally, the customer's history shows multiple orders of similar products for naval and marine applications."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-4002",
+          "description": "Nipple, 1/2\" NPT, C46400, 300psi",
+          "confidence": 0.6,
+          "reasoning": "Although the product type doesn't match, the material grade (C46400) and pressure rating (300psi) match. The customer's history shows orders of similar materials and pressure ratings for marine applications, but the product type (nipple) is less likely given the request for an elbow."
+        }
+      ],
+      "expected_sku": "BF-1008",
+      "actual_sku": "BF-1008",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_04",
+      "status": "ok",
+      "elapsed_seconds": 1.8,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's RFQ intent provides specific specs and references a past order for a hospital wing project, allowing for targeted SKU recommendations.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-6001",
+          "description": "Reducer, 3/4\" x 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.9,
+          "reasoning": "The customer's RFQ intent specifies a reducer from 3/4\" to 1/2\", NPT thread standard, C36000 material grade, and 150 PSI pressure rating. Their past order history includes SKU BF-6001 for a hospital wing project, matching the current project's context. The specs and history converge on BF-6001."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-6004",
+          "description": "Reducer, 3/4\" x 1/2\", NPT, C84400, 250 PSI",
+          "confidence": 0.6,
+          "reasoning": "Although BF-6004 matches the size and thread standard, the material grade (C84400) and higher pressure rating (250 PSI) differ from the customer's specs. However, it's a possible alternative given the end-market signals."
+        }
+      ],
+      "expected_sku": "BF-6001",
+      "actual_sku": "BF-6001",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_05",
+      "status": "ok",
+      "elapsed_seconds": 2.02,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's request provided clear specifications and a history of relevant orders, allowing for a confident recommendation of BF-5002.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-5002",
+          "description": "Union, 1/2\", NPT, C84400, 250psi",
+          "confidence": 0.9,
+          "reasoning": "The customer's request for a union with 1/2\" size, NPT thread standard, C84400 material grade, and 250psi pressure rating matches exactly with BF-5002. Additionally, the customer's history shows a previous order for BF-5002 for a pharma cleanroom project, which aligns with the current project's pharmaceutical cleanroom requirement."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-2004",
+          "description": "Tee, 3/4\", NPT, C84400, 250psi",
+          "confidence": 0.6,
+          "reasoning": "Although BF-2004 does not match the requested product type (union), it matches the material grade, pressure rating, and has a similar size. The customer's history also shows a previous order for BF-2004, indicating a possible preference for this type of product."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-3004",
+          "description": "Coupling, 3/4\", NPT, C84400, 250psi",
+          "confidence": 0.4,
+          "reasoning": "BF-3004 matches the material grade and pressure rating but not the product type or size. The customer's history does not show any previous orders for this specific product."
+        }
+      ],
+      "expected_sku": "BF-5002",
+      "actual_sku": "BF-5002",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_06",
+      "status": "ok",
+      "elapsed_seconds": 1.48,
+      "expected_route": "clarify",
+      "actual_route": "quote",
+      "route_correct": false,
+      "route_reasoning": "The RFQ provided sufficient details to narrow down to specific SKUs based on customer history and product specifications.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1004",
+          "description": "Elbow, 1/2\", sweat, C36000, 200psi",
+          "confidence": 0.9,
+          "reasoning": "The customer's history shows frequent orders of BF-1003 and BF-1004, both of which are 1/2\" elbows. Given the requested size and material grade, BF-1004 is a strong match as it fits the residential plumbing end-market and has a suitable pressure rating."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-1003",
+          "description": "Elbow, 1/2\", compression, C36000, 200psi",
+          "confidence": 0.8,
+          "reasoning": "Similar to BF-1004, BF-1003 matches the size and material grade requirements. It's also a popular choice among the customer's past orders and suits residential plumbing applications."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150psi",
+          "confidence": 0.4,
+          "reasoning": "While BF-1001 matches the size and material, its NPT thread standard and lower pressure rating make it less likely given the customer's typical applications and past orders."
+        }
+      ],
+      "question_quality": {
+        "score": 0.0,
+        "addressed_specs": [],
+        "missed_specs": [
+          "thread_standard"
+        ]
+      },
+      "failure_analysis": {
+        "expected": "clarify",
+        "got": "quote",
+        "top_confidence": 0.9,
+        "hypothesis_count": 3
+      }
+    },
+    {
+      "id": "tc_07",
+      "status": "ok",
+      "elapsed_seconds": 7.78,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's RFQ provides sufficient information to narrow down to specific elbow fittings, and their history suggests a strong likelihood of needing a product like BF-1001.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.9,
+          "reasoning": "The customer's request for an elbow fitting with a half-inch size matches BF-1001. Their history with Marriott renovations and previous orders of similar products (BF-1001, BF-2001) suggest a preference for NPT thread standard and C36000 material grade. The urgency of the order and common end-markets also align with this SKU."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-1002",
+          "description": "Elbow, 1/2\", BSP, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "Although BF-1002 is similar to BF-1001, the BSP thread standard is less common in the customer's history. However, it's still a possibility given the customer's experience with various products."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-1004",
+          "description": "Elbow, 1/2\", sweat, C36000, 200 PSI",
+          "confidence": 0.4,
+          "reasoning": "BF-1004 has a different thread standard (sweat) and higher pressure rating, which doesn't align as closely with the customer's history and the Marriott job specifics."
+        }
+      ],
+      "expected_sku": "BF-1001",
+      "actual_sku": "BF-1001",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_08",
+      "status": "ok",
+      "elapsed_seconds": 4.63,
+      "expected_route": "clarify",
+      "actual_route": "quote",
+      "route_correct": false,
+      "route_reasoning": "The customer's specific request for a nipple with 1/2\" size, combined with their history of marine-related orders and the need for a product that can withstand saltwater exposure, allowed for a targeted recommendation.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-4002",
+          "description": "1/2\" NPT Nipple, C46400, 300psi",
+          "confidence": 0.9,
+          "reasoning": "The customer's request for a 1/2\" nipple with a marine dock application and saltwater exposure strongly aligns with BF-4002's marine/naval/offshore end-markets and C46400 material grade, which is suitable for harsh environments."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-4001",
+          "description": "1/2\" NPT Nipple, C36000, 150psi",
+          "confidence": 0.6,
+          "reasoning": "Although BF-4001 matches the 1/2\" size requirement, its C36000 material grade and 150psi rating are less suitable for marine applications with saltwater exposure compared to BF-4002."
+        }
+      ],
+      "question_quality": {
+        "score": 0.0,
+        "addressed_specs": [],
+        "missed_specs": [
+          "material_grade"
+        ]
+      },
+      "failure_analysis": {
+        "expected": "clarify",
+        "got": "quote",
+        "top_confidence": 0.9,
+        "hypothesis_count": 2
+      }
+    },
+    {
+      "id": "tc_09",
+      "status": "ok",
+      "elapsed_seconds": 8.5,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's RFQ provided clear specs for a tee, and their history and end-market signals helped disambiguate the most likely SKU.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-2004",
+          "description": "Tee, 3/4\" NPT, C84400, 250psi",
+          "confidence": 0.9,
+          "reasoning": "The customer specifically requested a 3/4 inch NPT tee, and BF-2004 matches these specs. Additionally, the customer's history shows a similar order (BF-2004) for a dairy plant expansion and another for a brewery install (BF-3004), suggesting a preference for high-quality, food-grade products. The end markets for BF-2004 (potable water, food processing, pharmaceutical) also align with the customer's industry and typical end markets."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-3004",
+          "description": "Coupling, 3/4\" NPT, C84400, 250psi",
+          "confidence": 0.6,
+          "reasoning": "Although the customer requested a tee, their history with similar products (e.g., BF-3004 for a brewery install) and the end markets for BF-3004 suggest a possible alternative. However, the product type doesn't match exactly, reducing confidence."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-2003",
+          "description": "Tee, 3/4\" NPT, C36000, 150psi",
+          "confidence": 0.4,
+          "reasoning": "BF-2003 matches the size and thread standard but has a lower material grade (C36000) and pressure rating (150psi). The customer's history suggests they might prefer higher-grade materials, but this SKU is a possible fit if they are looking for a more economical option."
+        }
+      ],
+      "expected_sku": "BF-2004",
+      "actual_sku": "BF-2004",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_10",
+      "status": "ok",
+      "elapsed_seconds": 11.11,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's previous order history and current project context (Amazon warehouse HVAC) provide strong signals to prioritize SKU BF-1005, with BF-1001 and BF-1006 as secondary options based on product type, size, and thread standard.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1005",
+          "description": "Elbow, 3/4\", NPT, C36000, 150 PSI",
+          "confidence": 0.9,
+          "reasoning": "The customer previously ordered BF-1005 for an Amazon warehouse HVAC project, matching the current project's context. The product type (elbow) and quantity (150) also align with the previous order."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The product type (elbow) matches, and the material grade (C36000) and thread standard (NPT) are common for HVAC applications. However, the size (1/2\") and quantity (150) don't directly match the previous order history."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-1006",
+          "description": "Elbow, 3/4\", BSP, C36000, 150 PSI",
+          "confidence": 0.4,
+          "reasoning": "The product type (elbow) and size (3/4\") match, but the thread standard (BSP) differs from the previous order (NPT). The material grade (C36000) is common for HVAC applications."
+        }
+      ],
+      "expected_sku": "BF-1005",
+      "actual_sku": "BF-1005",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_11",
+      "status": "ok",
+      "elapsed_seconds": 7.62,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's RFQ provided a clear product type (tee), size (1/2\"), and thread standard (compression), allowing for targeted matching with the catalog and consideration of their order history.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-2002",
+          "description": "Brass Tee, 1/2\" Compression, C36000, 200 PSI",
+          "confidence": 0.9,
+          "reasoning": "The customer specifically mentioned a 'tee' product type, 1/2\" size, and compression thread standard. Their past orders (BF-1003, BF-1004, BF-2002) and end-markets (residential plumbing, water heater, hydronic heating) align well with this product, which is commonly used in residential plumbing and has a suitable pressure rating."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-2001",
+          "description": "Brass Tee, 1/2\" NPT, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "Although the customer didn't specify NPT, their past orders include products with NPT thread standard. This product matches the requested tee type and size but has a lower pressure rating and different thread standard."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-1003",
+          "description": "Brass Elbow, 1/2\" Compression, C36000, 200 PSI",
+          "confidence": 0.4,
+          "reasoning": "While this product matches the size, thread standard, and pressure rating, it's an elbow, not a tee. The customer's request was specific to a tee, making this less likely."
+        }
+      ],
+      "expected_sku": "BF-2002",
+      "actual_sku": "BF-2002",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_12",
+      "status": "ok",
+      "elapsed_seconds": 4.66,
+      "expected_route": "clarify",
+      "actual_route": "quote",
+      "route_correct": false,
+      "route_reasoning": "The customer's past orders and end-market signals provide strong clues about their needs, allowing for a targeted set of hypotheses.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-3004",
+          "description": "Coupling, 3/4\", NPT, C84400, 250 PSI",
+          "confidence": 0.9,
+          "reasoning": "The customer has ordered similar products (BF-3004, BF-2004) in the past, which are lead-free and used in food processing and potable water applications. This SKU matches the NPT thread standard and lead-free material grade requirements."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-2004",
+          "description": "Tee, 3/4\", NPT, C84400, 250 PSI",
+          "confidence": 0.7,
+          "reasoning": "The customer has ordered this SKU (BF-2004) in the past for a food processing project. It matches the NPT thread standard and lead-free material grade requirements."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-5002",
+          "description": "Union, 1/2\", NPT, C84400, 250 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer has ordered similar products in the past, and this SKU matches the lead-free material grade requirement. However, it's a different product type and size."
+        }
+      ],
+      "question_quality": {
+        "score": 0.0,
+        "addressed_specs": [],
+        "missed_specs": [
+          "size"
+        ]
+      },
+      "failure_analysis": {
+        "expected": "clarify",
+        "got": "quote",
+        "top_confidence": 0.9,
+        "hypothesis_count": 3
+      }
+    },
+    {
+      "id": "tc_13",
+      "status": "ok",
+      "elapsed_seconds": 11.0,
+      "expected_route": "human",
+      "actual_route": "human",
+      "route_correct": true,
+      "route_reasoning": "The customer's request is missing critical specifications, but the urgency is ASAP, so providing some potential matches is necessary.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer didn't specify the product type, but elbow fittings are common. The size, thread standard, and material grade are missing, but BF-1001 is a popular choice for commercial plumbing and HVAC applications."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-3001",
+          "description": "Coupling, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.4,
+          "reasoning": "The customer didn't specify the product type, but couplings are also common. The size, thread standard, and material grade are missing, but BF-3001 is a popular choice for commercial plumbing and HVAC applications."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-2001",
+          "description": "Tee, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.3,
+          "reasoning": "The customer didn't specify the product type, but tees are also common. The size, thread standard, and material grade are missing, but BF-2001 is a popular choice for commercial plumbing and HVAC applications."
+        }
+      ]
+    },
+    {
+      "id": "tc_14",
+      "status": "ok",
+      "elapsed_seconds": 8.67,
+      "expected_route": "human",
+      "actual_route": "clarify",
+      "route_correct": false,
+      "route_reasoning": "The customer's request is specific about material and size, but lacks thread standard and product type, allowing for a educated guess.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1003",
+          "description": "Elbow, 1/2\", compression, C36000, 200psi",
+          "confidence": 0.7,
+          "reasoning": "The customer mentioned a size of 17.5, which is close to 1/2\". The thread standard is metric, which is similar to compression. The material is brass, which matches C36000."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150psi",
+          "confidence": 0.4,
+          "reasoning": "The customer mentioned a size of 17.5, which is close to 1/2\". The material is brass, which matches C36000. However, the thread standard is not specified."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-1002",
+          "description": "Elbow, 1/2\", BSP, C36000, 150psi",
+          "confidence": 0.3,
+          "reasoning": "The customer mentioned a size of 17.5, which is close to 1/2\". The material is brass, which matches C36000. However, the thread standard is not specified and BSP is less common."
+        }
+      ],
+      "failure_analysis": {
+        "expected": "human",
+        "got": "clarify",
+        "top_confidence": 0.7,
+        "hypothesis_count": 3
+      }
+    },
+    {
+      "id": "tc_15",
+      "status": "ok",
+      "elapsed_seconds": 10.71,
+      "expected_route": "human",
+      "actual_route": "human",
+      "route_correct": true,
+      "route_reasoning": "The customer's request lacks specific details, but the hypotheses are generated based on common brass fitting types and applications.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer did not provide specific details, but BF-1001 is a commonly used elbow fitting in commercial plumbing, HVAC, and hospitality industries, which are typical applications for brass fittings."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-3001",
+          "description": "Coupling, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.4,
+          "reasoning": "BF-3001 is another popular brass fitting used in commercial plumbing, HVAC, and industrial applications, making it a plausible choice given the lack of specific customer requirements."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-2001",
+          "description": "Tee, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.3,
+          "reasoning": "BF-2001 is a tee fitting that could be used in various applications, including commercial plumbing, hospitality, and HVAC, but it's less likely compared to elbow and coupling fittings."
+        }
+      ]
+    },
+    {
+      "id": "tc_16",
+      "status": "ok",
+      "elapsed_seconds": 7.92,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's request is well-specified, allowing for a confident match to a single SKU.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1005",
+          "description": "Elbow, 3/4\" NPT, C36000, 150 PSI",
+          "confidence": 0.9,
+          "reasoning": "The customer's request matches BF-1005 exactly in terms of product type (elbow), size (3/4\"), thread standard (NPT), material grade (C36000), and pressure rating (150 PSI)."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-1006",
+          "description": "Elbow, 3/4\" BSP, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer's request matches BF-1006 in all aspects except thread standard, which is specified as NPT. BSP is a possible alternative, but less likely given the NPT specification."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-3003",
+          "description": "Coupling, 3/4\" NPT, C36000, 150 PSI",
+          "confidence": 0.4,
+          "reasoning": "Although the product type doesn't match (coupling vs elbow), the specs match otherwise. However, the product type mismatch makes this less likely."
+        }
+      ],
+      "expected_sku": "BF-1005",
+      "actual_sku": "BF-1005",
+      "sku_correct": true
+    },
+    {
+      "id": "tc_17",
+      "status": "ok",
+      "elapsed_seconds": 7.6,
+      "expected_route": "clarify",
+      "actual_route": "human",
+      "route_correct": false,
+      "route_reasoning": "The customer's request lacks specific details, but based on common applications and product popularity, we can infer potential needs.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer did not provide specific details, but BF-1001 is a commonly used elbow fitting in commercial plumbing and HVAC applications, which are typical markets for our products."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-3001",
+          "description": "Coupling, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.4,
+          "reasoning": "BF-3001 is another popular fitting used in commercial plumbing and HVAC, making it a plausible choice given the lack of specific customer requirements."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-2001",
+          "description": "Tee, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.3,
+          "reasoning": "BF-2001 is a frequently used tee fitting in commercial plumbing and HVAC, but it's less likely compared to elbow and coupling fittings based on general market trends."
+        }
+      ],
+      "question_quality": {
+        "score": 0.0,
+        "addressed_specs": [],
+        "missed_specs": [
+          "size",
+          "thread_standard"
+        ]
+      },
+      "failure_analysis": {
+        "expected": "clarify",
+        "got": "human",
+        "top_confidence": 0.6,
+        "hypothesis_count": 3
+      }
+    },
+    {
+      "id": "tc_18",
+      "status": "ok",
+      "elapsed_seconds": 10.56,
+      "expected_route": "quote",
+      "actual_route": "quote",
+      "route_correct": true,
+      "route_reasoning": "The customer's RFQ shows a clear need for a brass fitting with a specific quantity, and their history provides a strong signal for the required product type and material grade.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1008",
+          "description": "Elbow, 1\" NPT, C46400, 300psi",
+          "confidence": 0.9,
+          "reasoning": "The customer's history shows multiple orders of BF-1008 for marine and naval projects, matching the requested quantity of 60. The end markets and material grade align well."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-4002",
+          "description": "Nipple, 1/2\" NPT, C46400, 300psi",
+          "confidence": 0.7,
+          "reasoning": "The customer has ordered BF-4002 in the past for similar marine and offshore projects. The material grade and end markets match, but the product type is different."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-3002",
+          "description": "Coupling, 1/2\" BSP, C36000, 150psi",
+          "confidence": 0.4,
+          "reasoning": "Although the customer has ordered BF-3002 before, the specs don't align as closely with the customer's history and the requested quantity."
+        }
+      ],
+      "expected_sku": "BF-4002",
+      "actual_sku": "BF-1008",
+      "sku_correct": false
+    },
+    {
+      "id": "tc_19",
+      "status": "ok",
+      "elapsed_seconds": 8.49,
+      "expected_route": "quote",
+      "actual_route": "clarify",
+      "route_correct": false,
+      "route_reasoning": "The customer's request provided sufficient specs to narrow down to a few possibilities, but the product type was not specified, leading to multiple potential matches.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1005",
+          "description": "Elbow, 3/4\" NPT, C36000, 150 PSI",
+          "confidence": 0.7,
+          "reasoning": "The customer mentioned size reduction from 1 inch to 3/4 inch, NPT thread standard, and standard brass material. BF-1005 matches the size, thread standard, and material grade, making it a strong candidate."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-3003",
+          "description": "Coupling, 3/4\" NPT, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer's specs also align with BF-3003, which is a coupling with the same size, thread standard, and material grade. However, the product type is not specified, making it less certain."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-2003",
+          "description": "Tee, 3/4\" NPT, C36000, 150 PSI",
+          "confidence": 0.5,
+          "reasoning": "BF-2003 is another possibility, but the product type is not specified, and the customer did not mention a tee specifically."
+        }
+      ],
+      "expected_sku": "BF-6002",
+      "actual_sku": null,
+      "sku_correct": false,
+      "failure_analysis": {
+        "expected": "quote",
+        "got": "clarify",
+        "top_confidence": 0.7,
+        "hypothesis_count": 3
+      }
+    },
+    {
+      "id": "tc_20",
+      "status": "ok",
+      "elapsed_seconds": 6.45,
+      "expected_route": "human",
+      "actual_route": "human",
+      "route_correct": true,
+      "route_reasoning": "The customer's request lacks specific details, but the hypotheses are generated based on common brass fitting applications and product popularity.",
+      "hypotheses": [
+        {
+          "rank": 1,
+          "sku": "BF-1001",
+          "description": "Elbow, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.6,
+          "reasoning": "The customer did not provide specific details, but BF-1001 is a commonly used elbow fitting in commercial plumbing, HVAC, and hospitality industries, which are typical applications for brass fittings."
+        },
+        {
+          "rank": 2,
+          "sku": "BF-3001",
+          "description": "Coupling, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.4,
+          "reasoning": "BF-3001 is another popular brass fitting used in commercial plumbing, HVAC, and industrial applications, making it a plausible option given the lack of specific customer requirements."
+        },
+        {
+          "rank": 3,
+          "sku": "BF-2001",
+          "description": "Tee, 1/2\", NPT, C36000, 150 PSI",
+          "confidence": 0.3,
+          "reasoning": "BF-2001 is a tee fitting that could be used in various applications, including commercial plumbing, hospitality, and HVAC, but it is less likely than BF-1001 or BF-3001 given the missing customer specifications."
+        }
+      ]
+    }
+  ]
+}
