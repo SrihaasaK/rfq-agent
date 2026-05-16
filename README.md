@@ -1,6 +1,6 @@
 # RFQ-to-Quote Agent
 
-A hypothesis-driven disambiguation agent that turns ambiguous brass fittings RFQ emails into confident quotes, targeted clarifying questions, or structured human escalations. Built as a technical demonstration for Paragon.
+A hypothesis-driven disambiguation agent that turns ambiguous brass fittings RFQ emails into confident quotes, targeted clarifying questions, or structured human escalations.
 
 **[Live Demo](https://srihaasak-rfq-agent-app-ezjiba.streamlit.app/)** | Run locally: `streamlit run app.py`
 
