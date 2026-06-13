@@ -1,0 +1,171 @@
+sku,type,description,size,thread_standard,material_grade,pressure_rating_psi,price_usd,common_end_markets
+BF-1000,elbow,"1/4"" NPT Brass (C36000) 90° Elbow, 150 PSI","1/4""",NPT,C36000,150,2.2,commercial plumbing;HVAC;industrial
+BF-1001,elbow,"3/8"" NPT Brass (C36000) 90° Elbow, 150 PSI","3/8""",NPT,C36000,150,2.8,commercial plumbing;HVAC;industrial
+BF-1002,elbow,"1/2"" NPT Brass (C36000) 90° Elbow, 150 PSI","1/2""",NPT,C36000,150,4.0,commercial plumbing;HVAC;industrial
+BF-1003,elbow,"3/4"" NPT Brass (C36000) 90° Elbow, 150 PSI","3/4""",NPT,C36000,150,5.8,commercial plumbing;HVAC;industrial
+BF-1004,elbow,"1"" NPT Brass (C36000) 90° Elbow, 125 PSI","1""",NPT,C36000,125,8.4,commercial plumbing;HVAC;industrial
+BF-1005,elbow,"1-1/4"" NPT Brass (C36000) 90° Elbow, 125 PSI","1-1/4""",NPT,C36000,125,11.2,commercial plumbing;HVAC;industrial
+BF-1006,elbow,"1-1/2"" NPT Brass (C36000) 90° Elbow, 125 PSI","1-1/2""",NPT,C36000,125,14.0,commercial plumbing;HVAC;industrial
+BF-1007,elbow,"2"" NPT Brass (C36000) 90° Elbow, 125 PSI","2""",NPT,C36000,125,18.4,commercial plumbing;HVAC;industrial
+BF-1008,elbow,"1/2"" BSP Brass (C36000) 90° Elbow, 150 PSI","1/2""",BSP,C36000,150,4.24,marine;import equipment;industrial
+BF-1009,elbow,"3/4"" BSP Brass (C36000) 90° Elbow, 150 PSI","3/4""",BSP,C36000,150,6.15,marine;import equipment;industrial
+BF-1010,elbow,"1"" BSP Brass (C36000) 90° Elbow, 125 PSI","1""",BSP,C36000,125,8.9,marine;import equipment;industrial
+BF-1011,elbow,"1/4"" compression Brass (C36000) 90° Elbow, 200 PSI","1/4""",compression,C36000,200,2.6,residential plumbing;water heater;refrigeration
+BF-1012,elbow,"3/8"" compression Brass (C36000) 90° Elbow, 200 PSI","3/8""",compression,C36000,200,3.3,residential plumbing;water heater;refrigeration
+BF-1013,elbow,"1/2"" compression Brass (C36000) 90° Elbow, 200 PSI","1/2""",compression,C36000,200,4.72,residential plumbing;water heater;refrigeration
+BF-1014,elbow,"3/4"" compression Brass (C36000) 90° Elbow, 200 PSI","3/4""",compression,C36000,200,6.84,residential plumbing;water heater;refrigeration
+BF-1015,elbow,"1/4"" sweat Brass (C36000) 90° Elbow, 200 PSI","1/4""",sweat,C36000,200,2.11,residential plumbing;hydronic heating
+BF-1016,elbow,"3/8"" sweat Brass (C36000) 90° Elbow, 200 PSI","3/8""",sweat,C36000,200,2.69,residential plumbing;hydronic heating
+BF-1017,elbow,"1/2"" sweat Brass (C36000) 90° Elbow, 200 PSI","1/2""",sweat,C36000,200,3.84,residential plumbing;hydronic heating
+BF-1018,elbow,"3/4"" sweat Brass (C36000) 90° Elbow, 200 PSI","3/4""",sweat,C36000,200,5.57,residential plumbing;hydronic heating
+BF-1019,elbow,"1"" sweat Brass (C36000) 90° Elbow, 175 PSI","1""",sweat,C36000,175,8.06,residential plumbing;hydronic heating
+BF-1020,elbow,"1/2"" NPT Naval Brass (C46400) 90° Elbow, 300 PSI","1/2""",NPT,C46400,300,6.2,marine;naval;offshore
+BF-1021,elbow,"3/4"" NPT Naval Brass (C46400) 90° Elbow, 300 PSI","3/4""",NPT,C46400,300,8.99,marine;naval;offshore
+BF-1022,elbow,"1"" NPT Naval Brass (C46400) 90° Elbow, 275 PSI","1""",NPT,C46400,275,13.02,marine;naval;offshore
+BF-1023,elbow,"1-1/4"" NPT Naval Brass (C46400) 90° Elbow, 275 PSI","1-1/4""",NPT,C46400,275,17.36,marine;naval;offshore
+BF-1024,elbow,"3/4"" NPT Lead-Free Bronze (C84400) 90° Elbow, 250 PSI","3/4""",NPT,C84400,250,10.15,potable water;food processing;pharmaceutical
+BF-1025,elbow,"1"" NPT Lead-Free Bronze (C84400) 90° Elbow, 225 PSI","1""",NPT,C84400,225,14.7,potable water;food processing;pharmaceutical
+BF-1026,elbow,"1-1/4"" NPT Lead-Free Bronze (C84400) 90° Elbow, 225 PSI","1-1/4""",NPT,C84400,225,19.6,potable water;food processing;pharmaceutical
+BF-1027,elbow,"1-1/2"" NPT Lead-Free Bronze (C84400) 90° Elbow, 225 PSI","1-1/2""",NPT,C84400,225,24.5,potable water;food processing;pharmaceutical
+BF-1028,elbow,"1/4"" flare Brass (C36000) 90° Elbow, 200 PSI","1/4""",flare,C36000,200,2.42,refrigeration;HVAC;gas lines
+BF-1029,elbow,"3/8"" flare Brass (C36000) 90° Elbow, 200 PSI","3/8""",flare,C36000,200,3.08,refrigeration;HVAC;gas lines
+BF-1030,elbow,"1/2"" flare Brass (C36000) 90° Elbow, 200 PSI","1/2""",flare,C36000,200,4.4,refrigeration;HVAC;gas lines
+BF-1100,elbow_45,"1/2"" NPT Brass (C36000) 45° Elbow, 150 PSI","1/2""",NPT,C36000,150,4.5,commercial plumbing;HVAC;industrial
+BF-1101,elbow_45,"3/4"" NPT Brass (C36000) 45° Elbow, 150 PSI","3/4""",NPT,C36000,150,6.52,commercial plumbing;HVAC;industrial
+BF-1102,elbow_45,"1"" NPT Brass (C36000) 45° Elbow, 125 PSI","1""",NPT,C36000,125,9.45,commercial plumbing;HVAC;industrial
+BF-1103,elbow_45,"1-1/4"" NPT Brass (C36000) 45° Elbow, 125 PSI","1-1/4""",NPT,C36000,125,12.6,commercial plumbing;HVAC;industrial
+BF-1104,elbow_45,"1/2"" BSP Brass (C36000) 45° Elbow, 150 PSI","1/2""",BSP,C36000,150,4.77,marine;import equipment;industrial
+BF-1105,elbow_45,"3/4"" BSP Brass (C36000) 45° Elbow, 150 PSI","3/4""",BSP,C36000,150,6.92,marine;import equipment;industrial
+BF-1106,elbow_45,"1/2"" NPT Naval Brass (C46400) 45° Elbow, 300 PSI","1/2""",NPT,C46400,300,6.98,marine;naval;offshore
+BF-1107,elbow_45,"3/4"" NPT Naval Brass (C46400) 45° Elbow, 300 PSI","3/4""",NPT,C46400,300,10.11,marine;naval;offshore
+BF-2000,tee,"1/4"" NPT Brass (C36000) Tee, 150 PSI","1/4""",NPT,C36000,150,3.3,commercial plumbing;HVAC;industrial
+BF-2001,tee,"3/8"" NPT Brass (C36000) Tee, 150 PSI","3/8""",NPT,C36000,150,4.2,commercial plumbing;HVAC;industrial
+BF-2002,tee,"1/2"" NPT Brass (C36000) Tee, 150 PSI","1/2""",NPT,C36000,150,6.0,commercial plumbing;HVAC;industrial
+BF-2003,tee,"3/4"" NPT Brass (C36000) Tee, 150 PSI","3/4""",NPT,C36000,150,8.7,commercial plumbing;HVAC;industrial
+BF-2004,tee,"1"" NPT Brass (C36000) Tee, 125 PSI","1""",NPT,C36000,125,12.6,commercial plumbing;HVAC;industrial
+BF-2005,tee,"1-1/4"" NPT Brass (C36000) Tee, 125 PSI","1-1/4""",NPT,C36000,125,16.8,commercial plumbing;HVAC;industrial
+BF-2006,tee,"1-1/2"" NPT Brass (C36000) Tee, 125 PSI","1-1/2""",NPT,C36000,125,21.0,commercial plumbing;HVAC;industrial
+BF-2007,tee,"2"" NPT Brass (C36000) Tee, 125 PSI","2""",NPT,C36000,125,27.6,commercial plumbing;HVAC;industrial
+BF-2008,tee,"1/4"" compression Brass (C36000) Tee, 200 PSI","1/4""",compression,C36000,200,3.89,residential plumbing;water heater;refrigeration
+BF-2009,tee,"3/8"" compression Brass (C36000) Tee, 200 PSI","3/8""",compression,C36000,200,4.96,residential plumbing;water heater;refrigeration
+BF-2010,tee,"1/2"" compression Brass (C36000) Tee, 200 PSI","1/2""",compression,C36000,200,7.08,residential plumbing;water heater;refrigeration
+BF-2011,tee,"3/4"" compression Brass (C36000) Tee, 200 PSI","3/4""",compression,C36000,200,10.27,residential plumbing;water heater;refrigeration
+BF-2012,tee,"3/4"" NPT Lead-Free Bronze (C84400) Tee, 250 PSI","3/4""",NPT,C84400,250,15.22,potable water;food processing;pharmaceutical
+BF-2013,tee,"1"" NPT Lead-Free Bronze (C84400) Tee, 225 PSI","1""",NPT,C84400,225,22.05,potable water;food processing;pharmaceutical
+BF-2014,tee,"1-1/4"" NPT Lead-Free Bronze (C84400) Tee, 225 PSI","1-1/4""",NPT,C84400,225,29.4,potable water;food processing;pharmaceutical
+BF-2015,tee,"1-1/2"" NPT Lead-Free Bronze (C84400) Tee, 225 PSI","1-1/2""",NPT,C84400,225,36.75,potable water;food processing;pharmaceutical
+BF-2016,tee,"1/2"" BSP Brass (C36000) Tee, 150 PSI","1/2""",BSP,C36000,150,6.36,marine;import equipment;industrial
+BF-2017,tee,"3/4"" BSP Brass (C36000) Tee, 150 PSI","3/4""",BSP,C36000,150,9.22,marine;import equipment;industrial
+BF-2018,tee,"1"" BSP Brass (C36000) Tee, 125 PSI","1""",BSP,C36000,125,13.36,marine;import equipment;industrial
+BF-2019,tee,"1/4"" sweat Brass (C36000) Tee, 200 PSI","1/4""",sweat,C36000,200,3.17,residential plumbing;hydronic heating
+BF-2020,tee,"3/8"" sweat Brass (C36000) Tee, 200 PSI","3/8""",sweat,C36000,200,4.03,residential plumbing;hydronic heating
+BF-2021,tee,"1/2"" sweat Brass (C36000) Tee, 200 PSI","1/2""",sweat,C36000,200,5.76,residential plumbing;hydronic heating
+BF-3000,coupling,"1/4"" NPT Brass (C36000) Coupling, 150 PSI","1/4""",NPT,C36000,150,1.76,commercial plumbing;HVAC;industrial
+BF-3001,coupling,"3/8"" NPT Brass (C36000) Coupling, 150 PSI","3/8""",NPT,C36000,150,2.24,commercial plumbing;HVAC;industrial
+BF-3002,coupling,"1/2"" NPT Brass (C36000) Coupling, 150 PSI","1/2""",NPT,C36000,150,3.2,commercial plumbing;HVAC;industrial
+BF-3003,coupling,"3/4"" NPT Brass (C36000) Coupling, 150 PSI","3/4""",NPT,C36000,150,4.64,commercial plumbing;HVAC;industrial
+BF-3004,coupling,"1"" NPT Brass (C36000) Coupling, 125 PSI","1""",NPT,C36000,125,6.72,commercial plumbing;HVAC;industrial
+BF-3005,coupling,"1-1/4"" NPT Brass (C36000) Coupling, 125 PSI","1-1/4""",NPT,C36000,125,8.96,commercial plumbing;HVAC;industrial
+BF-3006,coupling,"1-1/2"" NPT Brass (C36000) Coupling, 125 PSI","1-1/2""",NPT,C36000,125,11.2,commercial plumbing;HVAC;industrial
+BF-3007,coupling,"2"" NPT Brass (C36000) Coupling, 125 PSI","2""",NPT,C36000,125,14.72,commercial plumbing;HVAC;industrial
+BF-3008,coupling,"1/2"" BSP Brass (C36000) Coupling, 150 PSI","1/2""",BSP,C36000,150,3.39,marine;import equipment;industrial
+BF-3009,coupling,"3/4"" BSP Brass (C36000) Coupling, 150 PSI","3/4""",BSP,C36000,150,4.92,marine;import equipment;industrial
+BF-3010,coupling,"1"" BSP Brass (C36000) Coupling, 125 PSI","1""",BSP,C36000,125,7.12,marine;import equipment;industrial
+BF-3011,coupling,"3/4"" NPT Lead-Free Bronze (C84400) Coupling, 250 PSI","3/4""",NPT,C84400,250,8.12,potable water;food processing;pharmaceutical
+BF-3012,coupling,"1"" NPT Lead-Free Bronze (C84400) Coupling, 225 PSI","1""",NPT,C84400,225,11.76,potable water;food processing;pharmaceutical
+BF-3013,coupling,"1-1/4"" NPT Lead-Free Bronze (C84400) Coupling, 225 PSI","1-1/4""",NPT,C84400,225,15.68,potable water;food processing;pharmaceutical
+BF-3014,coupling,"1-1/2"" NPT Lead-Free Bronze (C84400) Coupling, 225 PSI","1-1/2""",NPT,C84400,225,19.6,potable water;food processing;pharmaceutical
+BF-3015,coupling,"1/4"" compression Brass (C36000) Coupling, 200 PSI","1/4""",compression,C36000,200,2.08,residential plumbing;water heater;refrigeration
+BF-3016,coupling,"3/8"" compression Brass (C36000) Coupling, 200 PSI","3/8""",compression,C36000,200,2.64,residential plumbing;water heater;refrigeration
+BF-3017,coupling,"1/2"" compression Brass (C36000) Coupling, 200 PSI","1/2""",compression,C36000,200,3.78,residential plumbing;water heater;refrigeration
+BF-3018,coupling,"3/4"" compression Brass (C36000) Coupling, 200 PSI","3/4""",compression,C36000,200,5.48,residential plumbing;water heater;refrigeration
+BF-3019,coupling,"1/4"" sweat Brass (C36000) Coupling, 200 PSI","1/4""",sweat,C36000,200,1.69,residential plumbing;hydronic heating
+BF-3020,coupling,"3/8"" sweat Brass (C36000) Coupling, 200 PSI","3/8""",sweat,C36000,200,2.15,residential plumbing;hydronic heating
+BF-3021,coupling,"1/2"" sweat Brass (C36000) Coupling, 200 PSI","1/2""",sweat,C36000,200,3.07,residential plumbing;hydronic heating
+BF-3022,coupling,"3/4"" sweat Brass (C36000) Coupling, 200 PSI","3/4""",sweat,C36000,200,4.45,residential plumbing;hydronic heating
+BF-3023,coupling,"1"" sweat Brass (C36000) Coupling, 175 PSI","1""",sweat,C36000,175,6.45,residential plumbing;hydronic heating
+BF-3024,coupling,"1/4"" flare Brass (C36000) Coupling, 200 PSI","1/4""",flare,C36000,200,1.94,refrigeration;HVAC;gas lines
+BF-3025,coupling,"3/8"" flare Brass (C36000) Coupling, 200 PSI","3/8""",flare,C36000,200,2.46,refrigeration;HVAC;gas lines
+BF-3026,coupling,"1/2"" flare Brass (C36000) Coupling, 200 PSI","1/2""",flare,C36000,200,3.52,refrigeration;HVAC;gas lines
+BF-4000,nipple,"1/4"" NPT Brass (C36000) Nipple, 150 PSI","1/4""",NPT,C36000,150,1.38,commercial plumbing;HVAC;industrial
+BF-4001,nipple,"3/8"" NPT Brass (C36000) Nipple, 150 PSI","3/8""",NPT,C36000,150,1.75,commercial plumbing;HVAC;industrial
+BF-4002,nipple,"1/2"" NPT Brass (C36000) Nipple, 150 PSI","1/2""",NPT,C36000,150,2.5,commercial plumbing;HVAC;industrial
+BF-4003,nipple,"3/4"" NPT Brass (C36000) Nipple, 150 PSI","3/4""",NPT,C36000,150,3.62,commercial plumbing;HVAC;industrial
+BF-4004,nipple,"1"" NPT Brass (C36000) Nipple, 125 PSI","1""",NPT,C36000,125,5.25,commercial plumbing;HVAC;industrial
+BF-4005,nipple,"1-1/4"" NPT Brass (C36000) Nipple, 125 PSI","1-1/4""",NPT,C36000,125,7.0,commercial plumbing;HVAC;industrial
+BF-4006,nipple,"1-1/2"" NPT Brass (C36000) Nipple, 125 PSI","1-1/2""",NPT,C36000,125,8.75,commercial plumbing;HVAC;industrial
+BF-4007,nipple,"2"" NPT Brass (C36000) Nipple, 125 PSI","2""",NPT,C36000,125,11.5,commercial plumbing;HVAC;industrial
+BF-4008,nipple,"1/2"" NPT Naval Brass (C46400) Nipple, 300 PSI","1/2""",NPT,C46400,300,3.88,marine;naval;offshore
+BF-4009,nipple,"3/4"" NPT Naval Brass (C46400) Nipple, 300 PSI","3/4""",NPT,C46400,300,5.62,marine;naval;offshore
+BF-4010,nipple,"1"" NPT Naval Brass (C46400) Nipple, 275 PSI","1""",NPT,C46400,275,8.14,marine;naval;offshore
+BF-4011,nipple,"1-1/4"" NPT Naval Brass (C46400) Nipple, 275 PSI","1-1/4""",NPT,C46400,275,10.85,marine;naval;offshore
+BF-4012,nipple,"3/4"" NPT Lead-Free Bronze (C84400) Nipple, 250 PSI","3/4""",NPT,C84400,250,6.34,potable water;food processing;pharmaceutical
+BF-4013,nipple,"1"" NPT Lead-Free Bronze (C84400) Nipple, 225 PSI","1""",NPT,C84400,225,9.19,potable water;food processing;pharmaceutical
+BF-4014,nipple,"1-1/4"" NPT Lead-Free Bronze (C84400) Nipple, 225 PSI","1-1/4""",NPT,C84400,225,12.25,potable water;food processing;pharmaceutical
+BF-4015,nipple,"1-1/2"" NPT Lead-Free Bronze (C84400) Nipple, 225 PSI","1-1/2""",NPT,C84400,225,15.31,potable water;food processing;pharmaceutical
+BF-4016,nipple,"1/4"" flare Brass (C36000) Nipple, 200 PSI","1/4""",flare,C36000,200,1.51,refrigeration;HVAC;gas lines
+BF-4017,nipple,"3/8"" flare Brass (C36000) Nipple, 200 PSI","3/8""",flare,C36000,200,1.93,refrigeration;HVAC;gas lines
+BF-4018,nipple,"1/2"" flare Brass (C36000) Nipple, 200 PSI","1/2""",flare,C36000,200,2.75,refrigeration;HVAC;gas lines
+BF-5000,union,"1/4"" NPT Brass (C36000) Union, 150 PSI","1/4""",NPT,C36000,150,5.5,commercial plumbing;HVAC;industrial
+BF-5001,union,"3/8"" NPT Brass (C36000) Union, 150 PSI","3/8""",NPT,C36000,150,7.0,commercial plumbing;HVAC;industrial
+BF-5002,union,"1/2"" NPT Brass (C36000) Union, 150 PSI","1/2""",NPT,C36000,150,10.0,commercial plumbing;HVAC;industrial
+BF-5003,union,"3/4"" NPT Brass (C36000) Union, 150 PSI","3/4""",NPT,C36000,150,14.5,commercial plumbing;HVAC;industrial
+BF-5004,union,"1"" NPT Brass (C36000) Union, 125 PSI","1""",NPT,C36000,125,21.0,commercial plumbing;HVAC;industrial
+BF-5005,union,"1-1/4"" NPT Brass (C36000) Union, 125 PSI","1-1/4""",NPT,C36000,125,28.0,commercial plumbing;HVAC;industrial
+BF-5006,union,"1-1/2"" NPT Brass (C36000) Union, 125 PSI","1-1/2""",NPT,C36000,125,35.0,commercial plumbing;HVAC;industrial
+BF-5007,union,"2"" NPT Brass (C36000) Union, 125 PSI","2""",NPT,C36000,125,46.0,commercial plumbing;HVAC;industrial
+BF-5008,union,"3/4"" NPT Lead-Free Bronze (C84400) Union, 250 PSI","3/4""",NPT,C84400,250,25.38,potable water;food processing;pharmaceutical
+BF-5009,union,"1"" NPT Lead-Free Bronze (C84400) Union, 225 PSI","1""",NPT,C84400,225,36.75,potable water;food processing;pharmaceutical
+BF-5010,union,"1-1/4"" NPT Lead-Free Bronze (C84400) Union, 225 PSI","1-1/4""",NPT,C84400,225,49.0,potable water;food processing;pharmaceutical
+BF-5011,union,"1-1/2"" NPT Lead-Free Bronze (C84400) Union, 225 PSI","1-1/2""",NPT,C84400,225,61.25,potable water;food processing;pharmaceutical
+BF-5012,union,"1/4"" compression Brass (C36000) Union, 200 PSI","1/4""",compression,C36000,200,6.49,residential plumbing;water heater;refrigeration
+BF-5013,union,"3/8"" compression Brass (C36000) Union, 200 PSI","3/8""",compression,C36000,200,8.26,residential plumbing;water heater;refrigeration
+BF-5014,union,"1/2"" compression Brass (C36000) Union, 200 PSI","1/2""",compression,C36000,200,11.8,residential plumbing;water heater;refrigeration
+BF-5015,union,"3/4"" compression Brass (C36000) Union, 200 PSI","3/4""",compression,C36000,200,17.11,residential plumbing;water heater;refrigeration
+BF-7000,plug,"1/4"" NPT Brass (C36000) Plug, 150 PSI","1/4""",NPT,C36000,150,0.99,commercial plumbing;HVAC;industrial
+BF-7001,plug,"3/8"" NPT Brass (C36000) Plug, 150 PSI","3/8""",NPT,C36000,150,1.26,commercial plumbing;HVAC;industrial
+BF-7002,plug,"1/2"" NPT Brass (C36000) Plug, 150 PSI","1/2""",NPT,C36000,150,1.8,commercial plumbing;HVAC;industrial
+BF-7003,plug,"3/4"" NPT Brass (C36000) Plug, 150 PSI","3/4""",NPT,C36000,150,2.61,commercial plumbing;HVAC;industrial
+BF-7004,plug,"1"" NPT Brass (C36000) Plug, 125 PSI","1""",NPT,C36000,125,3.78,commercial plumbing;HVAC;industrial
+BF-7005,plug,"1-1/4"" NPT Brass (C36000) Plug, 125 PSI","1-1/4""",NPT,C36000,125,5.04,commercial plumbing;HVAC;industrial
+BF-7006,plug,"1-1/2"" NPT Brass (C36000) Plug, 125 PSI","1-1/2""",NPT,C36000,125,6.3,commercial plumbing;HVAC;industrial
+BF-7007,plug,"2"" NPT Brass (C36000) Plug, 125 PSI","2""",NPT,C36000,125,8.28,commercial plumbing;HVAC;industrial
+BF-7008,plug,"1/2"" NPT Naval Brass (C46400) Plug, 300 PSI","1/2""",NPT,C46400,300,2.79,marine;naval;offshore
+BF-7009,plug,"3/4"" NPT Naval Brass (C46400) Plug, 300 PSI","3/4""",NPT,C46400,300,4.05,marine;naval;offshore
+BF-7010,plug,"1"" NPT Naval Brass (C46400) Plug, 275 PSI","1""",NPT,C46400,275,5.86,marine;naval;offshore
+BF-8000,cap,"1/4"" NPT Brass (C36000) Cap, 150 PSI","1/4""",NPT,C36000,150,0.88,commercial plumbing;HVAC;industrial
+BF-8001,cap,"3/8"" NPT Brass (C36000) Cap, 150 PSI","3/8""",NPT,C36000,150,1.12,commercial plumbing;HVAC;industrial
+BF-8002,cap,"1/2"" NPT Brass (C36000) Cap, 150 PSI","1/2""",NPT,C36000,150,1.6,commercial plumbing;HVAC;industrial
+BF-8003,cap,"3/4"" NPT Brass (C36000) Cap, 150 PSI","3/4""",NPT,C36000,150,2.32,commercial plumbing;HVAC;industrial
+BF-8004,cap,"1"" NPT Brass (C36000) Cap, 125 PSI","1""",NPT,C36000,125,3.36,commercial plumbing;HVAC;industrial
+BF-8005,cap,"1-1/4"" NPT Brass (C36000) Cap, 125 PSI","1-1/4""",NPT,C36000,125,4.48,commercial plumbing;HVAC;industrial
+BF-8006,cap,"1-1/2"" NPT Brass (C36000) Cap, 125 PSI","1-1/2""",NPT,C36000,125,5.6,commercial plumbing;HVAC;industrial
+BF-8007,cap,"2"" NPT Brass (C36000) Cap, 125 PSI","2""",NPT,C36000,125,7.36,commercial plumbing;HVAC;industrial
+BF-8008,cap,"3/4"" NPT Lead-Free Bronze (C84400) Cap, 250 PSI","3/4""",NPT,C84400,250,4.06,potable water;food processing;pharmaceutical
+BF-8009,cap,"1"" NPT Lead-Free Bronze (C84400) Cap, 225 PSI","1""",NPT,C84400,225,5.88,potable water;food processing;pharmaceutical
+BF-9000,cross,"1/2"" NPT Brass (C36000) Cross, 150 PSI","1/2""",NPT,C36000,150,8.0,commercial plumbing;HVAC;industrial
+BF-9001,cross,"3/4"" NPT Brass (C36000) Cross, 150 PSI","3/4""",NPT,C36000,150,11.6,commercial plumbing;HVAC;industrial
+BF-9002,cross,"1"" NPT Brass (C36000) Cross, 125 PSI","1""",NPT,C36000,125,16.8,commercial plumbing;HVAC;industrial
+BF-9003,cross,"1-1/4"" NPT Brass (C36000) Cross, 125 PSI","1-1/4""",NPT,C36000,125,22.4,commercial plumbing;HVAC;industrial
+BF-6000,reducer,"3/4"" x 1/2"" NPT Brass (C36000) Reducer, 150 PSI","3/4"" x 1/2""",NPT,C36000,150,6.38,commercial plumbing;HVAC;industrial
+BF-6001,reducer,"1"" x 3/4"" NPT Brass (C36000) Reducer, 125 PSI","1"" x 3/4""",NPT,C36000,125,9.24,commercial plumbing;HVAC;industrial
+BF-6002,reducer,"1"" x 1/2"" NPT Brass (C36000) Reducer, 125 PSI","1"" x 1/2""",NPT,C36000,125,9.24,commercial plumbing;HVAC;industrial
+BF-6003,reducer,"1-1/4"" x 1"" NPT Brass (C36000) Reducer, 125 PSI","1-1/4"" x 1""",NPT,C36000,125,12.32,commercial plumbing;HVAC;industrial
+BF-6004,reducer,"1-1/4"" x 3/4"" NPT Brass (C36000) Reducer, 125 PSI","1-1/4"" x 3/4""",NPT,C36000,125,12.32,commercial plumbing;HVAC;industrial
+BF-6005,reducer,"1-1/2"" x 1"" NPT Brass (C36000) Reducer, 125 PSI","1-1/2"" x 1""",NPT,C36000,125,15.4,commercial plumbing;HVAC;industrial
+BF-6006,reducer,"1-1/2"" x 1-1/4"" NPT Brass (C36000) Reducer, 125 PSI","1-1/2"" x 1-1/4""",NPT,C36000,125,15.4,commercial plumbing;HVAC;industrial
+BF-6007,reducer,"2"" x 1-1/2"" NPT Brass (C36000) Reducer, 125 PSI","2"" x 1-1/2""",NPT,C36000,125,20.24,commercial plumbing;HVAC;industrial
+BF-6008,reducer,"2"" x 1"" NPT Brass (C36000) Reducer, 125 PSI","2"" x 1""",NPT,C36000,125,20.24,commercial plumbing;HVAC;industrial
+BF-6009,reducer,"1/2"" x 3/8"" NPT Brass (C36000) Reducer, 150 PSI","1/2"" x 3/8""",NPT,C36000,150,4.4,commercial plumbing;HVAC;industrial
+BF-6010,reducer,"3/8"" x 1/4"" NPT Brass (C36000) Reducer, 150 PSI","3/8"" x 1/4""",NPT,C36000,150,3.08,commercial plumbing;HVAC;industrial
+BF-6011,reducer,"3/4"" x 1/2"" NPT Lead-Free Bronze (C84400) Reducer, 250 PSI","3/4"" x 1/2""",NPT,C84400,250,11.17,potable water;food processing;pharmaceutical
+BF-6012,reducer,"1"" x 3/4"" NPT Lead-Free Bronze (C84400) Reducer, 225 PSI","1"" x 3/4""",NPT,C84400,225,16.17,potable water;food processing;pharmaceutical
+BF-6013,reducer,"1"" x 1/2"" NPT Lead-Free Bronze (C84400) Reducer, 225 PSI","1"" x 1/2""",NPT,C84400,225,16.17,potable water;food processing;pharmaceutical
+BF-6014,reducer,"1-1/4"" x 1"" NPT Lead-Free Bronze (C84400) Reducer, 225 PSI","1-1/4"" x 1""",NPT,C84400,225,21.56,potable water;food processing;pharmaceutical
+BF-9500,bushing,"1"" x 3/4"" NPT Brass (C36000) Bushing, 125 PSI","1"" x 3/4""",NPT,C36000,125,6.93,commercial plumbing;HVAC;industrial
+BF-9501,bushing,"3/4"" x 1/2"" NPT Brass (C36000) Bushing, 150 PSI","3/4"" x 1/2""",NPT,C36000,150,4.79,commercial plumbing;HVAC;industrial
+BF-9502,bushing,"1/2"" x 3/8"" NPT Brass (C36000) Bushing, 150 PSI","1/2"" x 3/8""",NPT,C36000,150,3.3,commercial plumbing;HVAC;industrial
+BF-9503,bushing,"3/4"" x 3/8"" NPT Brass (C36000) Bushing, 150 PSI","3/4"" x 3/8""",NPT,C36000,150,4.79,commercial plumbing;HVAC;industrial
+BF-9504,bushing,"1"" x 1/2"" NPT Brass (C36000) Bushing, 125 PSI","1"" x 1/2""",NPT,C36000,125,6.93,commercial plumbing;HVAC;industrial
+BF-9505,bushing,"1"" x 3/4"" NPT Naval Brass (C46400) Bushing, 275 PSI","1"" x 3/4""",NPT,C46400,275,10.74,marine;naval;offshore
+BF-9506,bushing,"3/4"" x 1/2"" NPT Naval Brass (C46400) Bushing, 300 PSI","3/4"" x 1/2""",NPT,C46400,300,7.42,marine;naval;offshore
