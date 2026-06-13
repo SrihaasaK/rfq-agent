@@ -5,8 +5,8 @@ python-dotenv>=1.0.0
 
 # RFQ-to-draft-quote MVP (app/)
 rank-bm25==0.2.2
-fastembed==0.3.6
-faiss-cpu==1.8.0
+fastembed==0.5.1
+faiss-cpu==1.9.0.post1
 sqlalchemy==2.0.35
 alembic==1.13.3
 pandas==2.2.3
