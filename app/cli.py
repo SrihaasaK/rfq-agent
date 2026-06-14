@@ -1,8 +1,8 @@
 """CLI: RFQ text in, matched lines + confidence out.
 
 Usage:
-    python -m app.cli samples/email_01_clear_coupling.txt
-    python -m app.cli samples/email_01_clear_coupling.txt --json
+    python -m app.cli samples/fastener_email_01_clear_cap_screw.txt
+    python -m app.cli samples/fastener_email_03_bom.xlsx --json
 """
 
 from __future__ import annotations
@@ -14,6 +14,7 @@ from pathlib import Path
 
 from app.db.models import AuditLogEntry, LineItem, RFQ
 from app.db.session import get_session
+from app.ingest.documents import load_rfq_text
 from app.llm import LLMClient
 from app.match.hybrid import HybridMatcher, confidence_bucket
 from app.normalize.units import normalize_line_item
@@ -112,11 +113,11 @@ def print_results(report: dict) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Process an RFQ: extract, normalize, match against catalog.")
-    parser.add_argument("rfq_file", type=Path, help="Path to a plain-text RFQ file")
+    parser.add_argument("rfq_file", type=Path, help="Path to an RFQ file (.txt, .pdf, .xlsx, or .xls)")
     parser.add_argument("--json", action="store_true", help="Print raw JSON instead of formatted output")
     args = parser.parse_args()
 
-    rfq_text = args.rfq_file.read_text()
+    rfq_text = load_rfq_text(args.rfq_file)
     report = process_rfq_text(rfq_text, source=str(args.rfq_file))
 
     if args.json:

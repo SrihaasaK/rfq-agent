@@ -44,6 +44,15 @@ def confidence_bucket(confidence: float) -> str:
     return "LOW"
 
 
+def _infer_units(diameter: str) -> str | None:
+    """Infer 'metric'/'imperial' from a canonical diameter string when not extracted directly."""
+    if re.match(r"^[mM]\d", diameter):
+        return "metric"
+    if diameter.startswith("#") or '"' in diameter:
+        return "imperial"
+    return None
+
+
 class HybridMatcher:
     """BM25 + embedding indices over the catalog, fused via RRF, LLM-reranked."""
 
@@ -63,12 +72,18 @@ class HybridMatcher:
                     "sku": c.sku,
                     "type": c.type,
                     "description": c.description,
-                    "size": c.size,
-                    "thread_standard": c.thread_standard,
-                    "material_grade": c.material_grade,
-                    "pressure_rating_psi": c.pressure_rating_psi,
+                    "diameter": c.diameter,
+                    "thread_pitch_or_tpi": c.thread_pitch_or_tpi,
+                    "length": c.length,
+                    "grade_or_class": c.grade_or_class,
+                    "material": c.material,
+                    "finish_coating": c.finish_coating,
+                    "head_type": c.head_type,
+                    "drive_type": c.drive_type,
+                    "standard": c.standard,
+                    "thread_direction": c.thread_direction,
+                    "units": c.units,
                     "price_usd": c.price_usd,
-                    "common_end_markets": c.common_end_markets,
                 }
                 for c in items
             ]
@@ -90,16 +105,45 @@ class HybridMatcher:
         index.add(embeddings)
         self._faiss_index = index
 
-    def _bm25_candidates(self, query: str) -> list[int]:
+    def _bm25_candidates(self, query: str, allowed: set[int]) -> list[int]:
         scores = self._bm25.get_scores(_tokenize(query))
-        ranked = np.argsort(scores)[::-1]
-        return [int(i) for i in ranked[:BM25_TOP_K] if scores[i] > 0]
+        ranked = sorted(allowed, key=lambda i: scores[i], reverse=True)
+        return [i for i in ranked if scores[i] > 0][:BM25_TOP_K]
 
-    def _embedding_candidates(self, query: str) -> list[int]:
+    def _embedding_candidates(self, query: str, allowed: set[int]) -> list[int]:
         query_emb = np.array(list(self._embedder.embed([query])), dtype="float32")
         faiss.normalize_L2(query_emb)
-        _, indices = self._faiss_index.search(query_emb, EMBEDDING_TOP_K)
-        return [int(i) for i in indices[0] if i >= 0]
+        _, indices = self._faiss_index.search(query_emb, len(self._catalog))
+        return [int(i) for i in indices[0] if i >= 0 and int(i) in allowed][:EMBEDDING_TOP_K]
+
+    def _hard_filter(self, attributes: dict) -> list[int] | None:
+        """Restrict to catalog SKUs matching diameter, thread spec, length, and unit
+        system exactly. Returns None if the line item itself lacks enough structural
+        information (diameter and/or thread pitch/TPI) to identify a fastener at all.
+        """
+        diameter = attributes.get("diameter")
+        thread = attributes.get("thread_pitch_or_tpi")
+        if not diameter or not thread:
+            return None
+
+        units = attributes.get("units") or _infer_units(diameter)
+        length = attributes.get("length")
+        thread_direction = attributes.get("thread_direction") or "RH"
+
+        matches = []
+        for i, item in enumerate(self._catalog):
+            if item["diameter"] != diameter:
+                continue
+            if item["thread_pitch_or_tpi"] != thread:
+                continue
+            if units and item["units"] != units:
+                continue
+            if item["thread_direction"] != thread_direction:
+                continue
+            if length and item["length"] != length:
+                continue
+            matches.append(i)
+        return matches
 
     @staticmethod
     def _rrf_fuse(*ranked_lists: list[int]) -> list[int]:
@@ -115,21 +159,44 @@ class HybridMatcher:
 
         Returns {"sku", "confidence", "price_usd", "alternatives", "reasoning"}
         per the match schema (sku=None / confidence=0.0 means abstain).
+
+        Matching is a hard filter followed by a soft rank: candidates must match
+        diameter, thread pitch/TPI, length (if given), thread direction, and unit
+        system (imperial/metric) exactly before BM25/embedding/LLM ever see them.
+        This guarantees a 1/4-20 request never gets ranked against 5/16-18 SKUs
+        just because their descriptions are textually similar.
         """
-        query = build_query_text(line_item)
+        attributes = line_item.get("attributes") or {}
+        allowed_indices = self._hard_filter(attributes)
 
-        bm25_ranked = self._bm25_candidates(query)
-        emb_ranked = self._embedding_candidates(query)
-        fused = self._rrf_fuse(bm25_ranked, emb_ranked)
-
-        if not fused:
+        if allowed_indices is None:
             return {
                 "sku": None,
                 "confidence": 0.0,
                 "price_usd": None,
                 "alternatives": [],
-                "reasoning": "No candidate SKUs found by BM25 or embedding search.",
+                "reasoning": "Could not determine diameter and/or thread pitch/TPI from "
+                "the request, so no SKU can be confidently identified.",
             }
+
+        if not allowed_indices:
+            spec = f"diameter={attributes.get('diameter')!r}, thread={attributes.get('thread_pitch_or_tpi')!r}"
+            if attributes.get("length"):
+                spec += f", length={attributes['length']!r}"
+            return {
+                "sku": None,
+                "confidence": 0.0,
+                "price_usd": None,
+                "alternatives": [],
+                "reasoning": f"No catalog SKU matches the requested spec ({spec}).",
+            }
+
+        query = build_query_text(line_item)
+        allowed = set(allowed_indices)
+
+        bm25_ranked = self._bm25_candidates(query, allowed)
+        emb_ranked = self._embedding_candidates(query, allowed)
+        fused = self._rrf_fuse(bm25_ranked, emb_ranked)
 
         top_indices = fused[:RERANK_CANDIDATES]
         candidates = [self._catalog[i] for i in top_indices]

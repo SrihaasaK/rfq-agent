@@ -15,9 +15,9 @@ from app.db.session import get_session
 def load_catalog_csv(path: Path = CATALOG_CSV_PATH) -> int:
     """Replace the catalog_items table with the contents of the given CSV.
 
-    Expected columns: sku, type, description, size, thread_standard,
-    material_grade, pressure_rating_psi, price_usd, common_end_markets
-    (common_end_markets is a ';'-separated list).
+    Expected columns: sku, type, description, diameter, thread_pitch_or_tpi,
+    length, grade_or_class, material, finish_coating, head_type, drive_type,
+    standard, thread_direction, units, price_usd.
 
     Returns the number of rows loaded.
     """
@@ -32,12 +32,18 @@ def load_catalog_csv(path: Path = CATALOG_CSV_PATH) -> int:
                     sku=row["sku"],
                     type=row["type"],
                     description=row["description"],
-                    size=row["size"],
-                    thread_standard=row["thread_standard"],
-                    material_grade=row["material_grade"],
-                    pressure_rating_psi=int(row["pressure_rating_psi"]),
+                    diameter=row["diameter"],
+                    thread_pitch_or_tpi=row["thread_pitch_or_tpi"],
+                    length=row["length"],
+                    grade_or_class=row["grade_or_class"],
+                    material=row["material"],
+                    finish_coating=row["finish_coating"],
+                    head_type=row["head_type"],
+                    drive_type=row["drive_type"],
+                    standard=row["standard"],
+                    thread_direction=row["thread_direction"],
+                    units=row["units"],
                     price_usd=float(row["price_usd"]),
-                    common_end_markets=row["common_end_markets"].split(";") if row["common_end_markets"] else [],
                 )
             )
 

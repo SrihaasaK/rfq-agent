@@ -21,12 +21,18 @@ class CatalogItem(Base):
     sku: Mapped[str] = mapped_column(String, unique=True, index=True)
     type: Mapped[str] = mapped_column(String, index=True)
     description: Mapped[str] = mapped_column(String)
-    size: Mapped[str] = mapped_column(String)
-    thread_standard: Mapped[str] = mapped_column(String)
-    material_grade: Mapped[str] = mapped_column(String)
-    pressure_rating_psi: Mapped[int] = mapped_column(Integer)
+    diameter: Mapped[str] = mapped_column(String)
+    thread_pitch_or_tpi: Mapped[str] = mapped_column(String)
+    length: Mapped[str] = mapped_column(String)
+    grade_or_class: Mapped[str] = mapped_column(String)
+    material: Mapped[str] = mapped_column(String)
+    finish_coating: Mapped[str] = mapped_column(String)
+    head_type: Mapped[str] = mapped_column(String)
+    drive_type: Mapped[str] = mapped_column(String)
+    standard: Mapped[str] = mapped_column(String)
+    thread_direction: Mapped[str] = mapped_column(String)
+    units: Mapped[str] = mapped_column(String, index=True)
     price_usd: Mapped[float] = mapped_column(Float)
-    common_end_markets: Mapped[list[str]] = mapped_column(JSON, default=list)
 
 
 class RFQ(Base):
